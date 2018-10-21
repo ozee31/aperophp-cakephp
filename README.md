@@ -33,8 +33,6 @@ Les commandes seront à adapter si vous n'utilisez pas docker
 
 - Cake Shell : `docker-compose run --rm web bin/cake`
 
-- Créer une migration : `docker-compose run --rm web bin/cake bake migration {MigrationName}`
-
 ## Documentation
 
 ### CakePHP
@@ -71,3 +69,30 @@ Edition du fichier `./config/Migrations/20181021152751_CreateUsers.php`
 ```shell
 docker-compose run --rm web bin/cake migrations migrate
 ```
+
+### Création des classes MVC
+
+Ressources :
+
+- https://book.cakephp.org/3.0/fr/bake/usage.html
+
+#### Génération avec Bake
+
+```shell
+docker-compose run --rm web bin/cake bake controller Users
+docker-compose run --rm web bin/cake bake model Users
+```
+
+Les fichiers créés sont :
+
+Classes :
+
+- src/Controller/UsersController.php
+- src/Model/Entity/User.php
+- src/Model/Table/UsersTable.php
+
+Tests :
+
+- tests/Fixture/UsersFixture.php
+- tests/TestCase/Controller/UsersControllerTest.php
+- tests/TestCase/Model/Table/UsersTableTest.php
