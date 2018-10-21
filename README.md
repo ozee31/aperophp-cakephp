@@ -133,3 +133,4 @@ Dans un deuxième temps, si vous avez le temps vous pourrez fournir une API publ
 
 - Routing json : https://book.cakephp.org/3.0/fr/development/routing.html#file-extensions
 - Routing scope : https://book.cakephp.org/3.0/fr/development/routing.html#tour-rapide
+- Pagination - modifier la méthode finder : https://book.cakephp.org/3.0/fr/controllers/components/pagination.html
