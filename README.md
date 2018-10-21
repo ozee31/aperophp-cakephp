@@ -126,6 +126,7 @@ Dans un deuxième temps, si vous avez le temps vous pourrez fournir une API publ
 
 - ORM - associations : https://book.cakephp.org/3.0/fr/orm/associations.html
 - ORM - behaviors : https://book.cakephp.org/3.0/fr/orm/behaviors.html
+- ORM - données associées : https://book.cakephp.org/3.0/fr/orm/retrieving-data-and-resultsets.html#recuperer-les-donnees-associees
 - Slug : https://book.cakephp.org/3.0/fr/core-libraries/text.html#Cake\Utility\Text::slug
 
 #### API
