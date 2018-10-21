@@ -27,9 +27,13 @@ composer install
 
 ## Commandes
 
-- Composer (docker) : `docker-compose run --rm composer --ignore-platform-reqs `
+Les commandes seront à adapter si vous n'utilisez pas docker
 
-- Cake Shell (docker) : `docker-compose run --rm web bin/cake`
+- Composer : `docker-compose run --rm composer --ignore-platform-reqs `
+
+- Cake Shell : `docker-compose run --rm web bin/cake`
+
+- Créer une migration : `docker-compose run --rm web bin/cake bake migration {MigrationName}`
 
 ## Documentation
 
@@ -37,8 +41,29 @@ composer install
 
 - Book : https://book.cakephp.org/3.0/fr/index.html
 - Api : https://api.cakephp.org/3.6/
+- Migrations : https://book.cakephp.org/3.0/fr/migrations.html#creation-de-migrations
 
 ### Plugins
 
 - CakePHP-Twig : https://github.com/WyriHaximus/TwigView
 - Bootstrap UI : https://github.com/FriendsOfCake/bootstrap-ui/tree/develop
+
+## Processus
+
+Voici les étapes que j'ai réalisées afin de créer le CRUD de la table `users`
+
+### Migration
+
+#### Création
+
+```shell
+docker-compose run --rm web bin/cake bake migration CreateUsers
+```
+
+Edition du fichier `./config/Migrations/20181021152751_CreateUsers.php`
+
+#### Application des migrations
+
+```shell
+docker-compose run --rm web bin/cake migrations migrate
+```
