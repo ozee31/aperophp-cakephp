@@ -96,3 +96,6 @@ Tests :
 - tests/Fixture/UsersFixture.php
 - tests/TestCase/Controller/UsersControllerTest.php
 - tests/TestCase/Model/Table/UsersTableTest.php
+
+### Création des templates
+

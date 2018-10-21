@@ -19,20 +19,20 @@
 </head>
 <body>
 <header>
-    {{ _view.fetch('header')|raw }}
+    {% element 'Layout/menu' %}
 </header>
-
-{{ Flash.render()|raw }}
 
 <section class="container-fluid">
 
     <h1>{{ _view.fetch('title')|raw }}</h1>
 
+    {{ Flash.render()|raw }}
+
     {{ _view.fetch('content')|raw }}
 </section>
 
-<footer>
-    {{ _view.fetch('footer')|raw }}
+<footer class="container-fluid footer">
+    {% element 'Layout/footer' %}
 </footer>
 
 {{ Html.script('https://code.jquery.com/jquery-3.3.1.slim.min.js')|raw }}
