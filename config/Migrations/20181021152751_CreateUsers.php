@@ -18,7 +18,7 @@ class CreateUsers extends AbstractMigration
             ->addColumn('lastname', 'string', ['null' => true, 'limit' => 50])
             ->addColumn('active', 'boolean', ['default' => true])
             ->addColumn('created', 'datetime')
-            ->addColumn('updated', 'datetime')
+            ->addColumn('modified', 'datetime')
             ->save();
     }
 }

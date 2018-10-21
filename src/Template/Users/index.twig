@@ -1,1 +1,45 @@
 {{ _view.assign('title', __("Liste des utilisateurs")) }}
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{ __('Nom') }}</th>
+            <th scope="col">{{ __('Actif') }}</th>
+            <th scope="col">{{ __('Créé') }}</th>
+            <th scope="col">{{ __('Modifié') }}</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% if users.count() %}
+            {% for user in users %}
+                <tr>
+                    <td>{{ Html.link(user.id, { 'controller': 'Users', 'action': 'edit' ~ '/' ~ user.id })|raw }}</td>
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.active ? __('Oui') : __('Non') }}</td>
+                    <td>{{ user.created }}</td>
+                    <td>{{ user.modified }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="5">{{ __("Il n'existe aucun utilisateur") }}</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
+
+<nav>
+    <ul class="pagination">
+        {{ Paginator.prev(__("<< Précédent"))|raw }}
+        {{ Paginator.numbers()|raw }}
+        {{ Paginator.next(__("Suivant >>"))|raw }}
+    </ul>
+</nav>
+
+<div class="row">
+    <div class="col">
+        {{ Html.link(__('Ajouter un utilisateur'), {'controller':'Users', 'action': 'add'})|raw }}
+    </div>
+</div>

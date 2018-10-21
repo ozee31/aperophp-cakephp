@@ -99,3 +99,7 @@ Tests :
 
 ### Création des templates
 
+- src/Template/Users/add.twig
+- src/Template/Users/edit.twig
+- src/Template/Users/index.twig
+- src/Template/Element/Users/form.twig

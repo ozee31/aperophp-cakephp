@@ -1,0 +1,13 @@
+{{ Form.create(user)|raw }}
+
+{{ Form.control('email', {label: __('Email')})|raw }}
+{{ Form.control('firstname', {label: __('Prénom')})|raw }}
+{{ Form.control('lastname', {label: __('Nom')})|raw }}
+{{ Form.control('active', {
+    label: __('Actif'),
+    type: 'checkbox'
+})|raw }}
+
+{{ Form.submit(__('Valider'))|raw }}
+
+{{ Form.end()|raw }}

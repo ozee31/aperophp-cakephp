@@ -34,4 +34,10 @@ class User extends Entity
         'created' => true,
         'updated' => true
     ];
+
+    protected function _getFullname()
+    {
+        return $this->_properties['firstname'] . '  ' .
+            $this->_properties['lastname'];
+    }
 }
