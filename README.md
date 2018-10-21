@@ -41,7 +41,7 @@ Les commandes seront à adapter si vous n'utilisez pas docker
 
 - Book : https://book.cakephp.org/3.0/fr/index.html
 - Api : https://api.cakephp.org/3.6/
-- Migrations : https://book.cakephp.org/3.0/fr/migrations.html#creation-de-migrations
+- Conventions : https://book.cakephp.org/3.0/fr/intro/conventions.html
 
 ### Plugins
 
@@ -53,6 +53,10 @@ Les commandes seront à adapter si vous n'utilisez pas docker
 Voici les étapes que j'ai réalisées afin de créer le CRUD de la table `users`
 
 ### Migration
+
+Ressources :
+
+- https://book.cakephp.org/3.0/fr/migrations.html#creation-de-migrations
 
 #### Création
 

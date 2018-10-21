@@ -7,7 +7,7 @@ function dcRun
 
 echo
 echo "============================"
-echo "INSTALLATION OF THE PROJECT "
+echo "INSTALLATION "
 echo "============================"
 
 echo
@@ -19,3 +19,14 @@ echo
 echo "Installation des dépendances"
 echo "------------"
 dcRun composer --ignore-platform-reqs install
+
+echo
+echo "Application des migrations"
+echo "------------"
+dcRun web bin/cake migrations migrate
+
+echo
+echo "============================"
+echo "INSTALLATION TERMINÉE"
+echo "http://localhost:8080/"
+echo "============================"
