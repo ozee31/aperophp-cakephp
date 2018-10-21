@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ Html.charset()|raw }}
+
+    <title>
+        {{ __('AperoPHP') }}
+        {{ _view.fetch('title')|raw }}
+    </title>
+
+    {{ Html.meta('icon')|raw }}
+
+    {{ Html.css('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')|raw }}
+    {{ Html.css('app.css')|raw }}
+
+    {{ _view.fetch('meta')|raw }}
+    {{ _view.fetch('css')|raw }}
+    {{ _view.fetch('script')|raw }}
+</head>
+<body>
+<header>
+    {{ _view.fetch('header')|raw }}
+</header>
+
+{{ Flash.render()|raw }}
+
+<section class="container-fluid">
+
+    <h1>{{ _view.fetch('title')|raw }}</h1>
+
+    {{ _view.fetch('content')|raw }}
+</section>
+
+<footer>
+    {{ _view.fetch('footer')|raw }}
+</footer>
+
+{{ Html.script('https://code.jquery.com/jquery-3.3.1.slim.min.js')|raw }}
+{{ Html.script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')|raw }}
+{{ Html.script('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')|raw }}
+{{ Html.script('app')|raw }}
+</body>
+</html>
